@@ -1,0 +1,19 @@
+*** Settings ***
+Library    SampleLib
+
+*** Variables ***
+
+*** Test Cases ***
+[TC-001]-A positive test
+    ${string} =    Return String
+    Should Be Equal    ${string}    Hello world
+
+[TC-002]-A failing test
+    ${string} =    Return String
+    Should Be Equal    ${string}    agfhjjhhjhj
+
+[TC-003]-Another test that returns two values
+    ${var1}    ${var2} =    Return Two Strings
+    Should Be Equal    ${var1}    value1
+    Should Be Equal    ${var2}    value2
+*** Keywords ***
